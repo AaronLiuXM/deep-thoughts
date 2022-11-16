@@ -22,6 +22,17 @@ const resolvers = {
         .popultae("thoughts");
     },
   },
+  Mutation: {
+    addUser: async (parent, args) => {
+      //user mutation
+      const user = await User.create(args);
+
+      return user;
+    },
+    login: async () => {
+      //login mutation
+    },
+  },
 };
 
 module.exports = resolvers;
